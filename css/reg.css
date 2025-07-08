@@ -4,20 +4,14 @@
 
 }
 body {
-    width: 100%;
-    height: auto;
-    align-items: center;
-    justify-content: space-between;
-}
-/*
-form{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; 
     justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    margin: 0;
 }
-*/
- #desc{
+#desc h3{
     text-align: center;
 }
 #btn{
@@ -35,3 +29,65 @@ a{
     color: blue;
     text-decoration: none;
 }
+
+/* Estilos padrão para telas grandes (desktop) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+    margin: 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Largura padrão para desktop */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="text"] { /* Adicione input type="text" se tiver um campo de nome no registro */
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* --- Media Query para Telas Menores (por exemplo, tablets e celulares) --- */
+@media (max-width: 768px) {
+    form {
+        width: 90%; /* Ajusta a largura do formulário para 90% da tela */
+        padding: 20px;
+    }
+
+    h1, h3 {
+        text-align: center;
+    }
+}
+
+/* --- Media Query para Celulares Muito Pequenos --- */
+@media (max-width: 480px) {
+    form {
+        width: 95%; /* Ainda mais estreito para telas muito pequenas */
+        padding: 15px;
+    }
+
+    /* Outros ajustes menores, se necessário */
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="text"] {
+        padding: 10px 12px;
+        font-size: 1em; /* Garante que o texto não fique muito pequeno */
+    }
+}
+
