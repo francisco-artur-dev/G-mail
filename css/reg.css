@@ -9,8 +9,15 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-
-th #desc{
+/*
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+*/
+ #desc{
     text-align: center;
 }
 #btn{
